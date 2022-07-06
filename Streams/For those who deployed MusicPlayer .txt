@@ -1,0 +1,16 @@
+For those who deployed MusicPlayer, here are some Online Radio streams that you can use to stream in your Bot.
+
+# Indonesian
+* Prambors fm : https://22283.live.streamtheworld.com:443/PRAMBORS_FM.mp3?dist=onlineradiobox
+* i-radio : https://n03.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABe120nigAlANV6qVbAOh-ZQ
+* Denger Music : http://stream.denger.in:8888/dmi
+* HARD ROCK fm : https://n10.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABe147nwUAAzSNf0FALqXEig
+* 
+# Others:
+* SkontoPlus : https://stream.radioskontoplus.lv:8443/st128
+* Kiss FM : https://radioindia.net/radio/kissfmindia/icecast.audio
+* City Dance : https://prclive4.listenon.in/Dance
+* Cassete radio : https://zas1.ndx.co.za:8158/stream?1596196923074
+* E FM : https://207.148.74.192:7874/stream.mp3
+* Capital FM : https://media-ice.musicradio.com/CapitalMP3
+* 
