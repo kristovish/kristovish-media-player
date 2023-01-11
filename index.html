@@ -4,73 +4,119 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Kristovish Media Player</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
-
 </head>
 
-
 <body>
-
     <div class="container">
         <div class="player">
+            <br><br>
             <div class="player__controls">
                 <div class="player__btn player__btn--small" id="previous">
-                        <a href="index_hard_rock_radio.html"> <i class="fas fa-arrow-left"></i>
-                          </a> 
-                     </div>
+                    <a href="#">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
 
-                <h5 class="player__title">playing now</h5>
+                <h5 class="player__title">Radio Player</h5>
 
                 <div class="player__btn player__btn--small" id="icon-menu">
-                    <i class="fas fa-bars"></i>
+                    <button id="icon-menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
 
+            <div id="media-info" class="media-info-section">
+                <p>Kristovish media player version 1.2</p>
+                <p>Desarrollado por kristovish</p>
+                <p>www.kristovish.com</p>
+            </div>
 
             <div class="player__album">
                 <img src="KRISTOVISH Logo - Original.png" alt="Album Cover" class="player__img">
             </div>
-
-            <h2 class="player__artist">Kristovish</h2>
-            <h3 class="player__song">Media Player</h3>
-
-            <input type="range" value="20" min="0" class="player__level" id="range" />
-
-            <div class="audio-duration">
-                <div class="start">Version</div>
-                <div class="end">0.1</div>
-            </div>
-
-            <audio class="player__audio" controls id="audio">
-                <source src="#" type="audio/mpeg" />
-            </audio>
-
-            <div class="player__controls" id="control">
-
-                <div class="player__btn player__btn--medium" id="backward">
-                    <a href="index_hard_rock_radio.html"> <i class="fas fa-backward"></i> </a>
-                </div>
-
-                <div class="player__btn player__btn--medium blue" id="play">
-                    <i class="fas fa-play play-btn"></i>
-                    <i class="fas fa-pause pause-btn hide"></i>
-                </div>
-
-                <div class="player__btn player__btn--medium" id="forward">
-                    <a href="index_capital_uk_radio.html">  <i class="fas fa-forward"></i> </a>
+            <br><br>
+            <div class="station-name-container">
+                <p id="station-name" class="player__song">Kristovish Media Player</p>
+                <audio id="audio" src=""></audio>
+                <div class="station-menu">
+                    <a href="#" class="station-link" id="Hard Rock Radio">Hard Rock Radio</a>
+                    <a href="#" class="station-link" id="Capital UK Radio">Capital UK Radio</a>
+                    <a href="#" class="station-link" id="Rock Nation Radio">Rock Nation Radio</a>
+                    <a href="#" class="station-link" id="Cosmos Radio">Cosmos Radio</a>
                 </div>
             </div>
 
+            <br>
+            
+
+
+
+        <input type="range" min="0" max="1" step="0.1" id="volume-control" oninput="setVolume(this.value)"/>
+
+        <br><br>
+        <div class="audio-duration">
+                
+            <div class="start">Volume</div>
+               
+            <div class="end">
+                <p id="volume-display" class="volume-control"></p>
+            </div>
+            
         </div>
 
-    </div>
+          
+        <audio class="player__audio" controls id="audio">
+              
+            <source src="#" type="audio/mpeg" />
+           
+        </audio>
+
+           
+        <div class="player__controls" id="control">
+
+               
+            <div class="player__btn player__btn--medium" id="backward">
+                   
+                <a href="#"> <i class="fas fa-backward"></i> </a>
+               
+            </div>
+
+               
+            <div class="player__btn player__btn--medium blue" id="play">
+                  
+                <i class="fas fa-play-btn"></i>
+                 
+                <i class="fas fa-pause-btn"></i>
+               
+            </div>
+
+               
+            <div class="player__btn player__btn--medium" id="forward">
+               
+                <a href="#">  <i class="fas fa-forward"></i> </a>
+               
+            </div>
+           
+        </div>
+
+        
+        <div class="media-info-overlay">
+            <div class="media-info-section">
+              <p>Kristovish media player version 1.2</p>
+              <p>Desarrollado por kristovish</p>
+              <p>www.kristovish.com</p>
+            </div>
+          </div>
+        </div>
+    
+</div>
 
     <script src="scripts.js"></script>
 
