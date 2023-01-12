@@ -179,18 +179,30 @@ img {
   position: relative;
 }
 
+.show-menu {
+  opacity: 1;
+}
+
+.hide-menu {
+  opacity: 0;
+}
+
 
 
 /* Estilos para el menú flotante */
 .station-menu {
+  width: 250px;
+  /* Ajustar el ancho a un cuarto del tamaño del contenedor */
+  height: 200px;
+  /* Ajustar el alto a la mitad del tamaño del contenedor */
   position: absolute;
-  top: 60%;
-  left: 0%;
+  top: 75%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background);
   border-radius: 12px;
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
   padding: 1em;
   display: none;
 }
@@ -198,6 +210,7 @@ img {
 .station-menu li {
   list-style: none;
   margin: 0.5em 0;
+
 }
 
 .station-menu a {
@@ -211,22 +224,36 @@ img {
   color: #5c87fe;
 }
 
+
+.station-list {
+  height: 140px;
+  overflow-y: scroll;
+}
+
 #icon-menu:hover .station-menu {
   display: block;
 }
 
 .player__menu {
   position: absolute;
-  top: 100px; /* o cualquier otra posición dentro del reproductor */
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  max-height: 350px; /* o cualquier otro alto */
-  overflow: hidden; /* oculta el contenido que sobrepase el alto máximo */
+  max-height: 350px;
+  /* o cualquier otro alto */
+  overflow: hidden;
+  /* oculta el contenido que sobrepase el alto máximo */
 }
+
 
 .player__menu--active {
   opacity: 1;
 }
+
+
+
+/* barra de estaciones y volumen */
 
 .animate {
   animation: moveRightToLeft 1s linear;
@@ -236,15 +263,19 @@ img {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0%);
   }
 }
 
 .station-name-container {
-  max-width: 90%; /* Establecer un ancho máximo para evitar que el nombre de la estación salga del reproductor */
-  overflow: hidden; /* Ocultar cualquier parte del nombre de la estación que exceda el ancho máximo */
-  position: relative; /* Habilita la posicion relativa para mover el nombre de la estación */
+  max-width: 90%;
+  /* Establecer un ancho máximo para evitar que el nombre de la estación salga del reproductor */
+  overflow: hidden;
+  /* Ocultar cualquier parte del nombre de la estación que exceda el ancho máximo */
+  position: relative;
+  /* Habilita la posicion relativa para mover el nombre de la estación */
 }
 
 #station-name {
@@ -252,22 +283,34 @@ img {
 }
 
 @keyframes move-right-to-left {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .volume-value {
   position: relative;
-  top: 30px; /* posicionarlo debajo del control */
+  top: 30px;
+  /* posicionarlo debajo del control */
   text-align: center;
-  width: 80%; /* para que ocupe el mismo ancho que el control deslizante */
+  width: 80%;
+  /* para que ocupe el mismo ancho que el control deslizante */
   margin: 0 auto;
 }
+
+
+
+/* Imagen Central logo */
 
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -282,10 +325,18 @@ img {
   transition: all 1s ease-in-out;
 }
 
+
+
+/* boton de informacion */
+
 .media-info-section {
+  width: 250px;
+  /* Ajustar el ancho a un cuarto del tamaño del contenedor */
+  height: 200px;
+  /* Ajustar el alto a la mitad del tamaño del contenedor */
   position: absolute;
-  top: 60%;
-  left: 0%;
+  top: 75%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background);
   border-radius: 12px;
@@ -294,6 +345,24 @@ img {
   padding: 1em;
   display: none;
 }
+
 #media-info:hover .media-info-section {
+  display: block;
+}
+
+#media-info p {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+/* boton pausa/play */
+
+.play-pause.playing .play-icon {
+  display: none;
+}
+
+.play-pause.playing .pause-icon {
   display: block;
 }
