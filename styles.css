@@ -12,7 +12,8 @@
 }
 
 body {
-  margin: 0;
+  width: 300px;
+  height: 550px;
   font-family: "Raleway", sans-serif;
 }
 
@@ -21,7 +22,7 @@ img {
 }
 
 .container {
-  background-color:#ffffff;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
