@@ -39,7 +39,7 @@ img {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
     
   .html {
     transform: scale(0.8); /* Reduce el tamaño en un 80% */
