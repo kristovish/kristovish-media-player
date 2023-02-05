@@ -76,7 +76,7 @@ const stations = [
   },
   {
     name: 'Cosmos Radio',
-    url: 'http://cosmosfm.stream.laut.fm/cosmosfm?'
+    url: 'https://cosmosfm.stream.laut.fm/cosmosfm?'
   },
   {
     name: 'Prambos Radio',
@@ -88,7 +88,7 @@ const stations = [
   },
   {
     name: 'Denger Radio',
-    url: 'http://stream.denger.in:8888/dmi'
+    url: 'https://stream.denger.in:8888/dmi'
   },
   {
     name: 'Skonto Radio',
