@@ -108,7 +108,7 @@ const stations = [
   },
   {
     name: 'Chile Islam Radio',
-    url: 'http://5.9.65.9:8031/stream?1508938696879.mp3'
+    url: 'https://5.9.65.9:8031/live?1508938696879'
   },
 ];
 const workingStations = [];
