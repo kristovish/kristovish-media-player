@@ -106,8 +106,15 @@ const stations = [
     name: 'E! Radio',
     url: 'https://207.148.74.192:7874/stream.mp3'
   },
+  {
+    name: 'Chile Islam Radio',
+    url: 'http://5.9.65.9:8031/live?1508938696879'
+  },
 ];
 const workingStations = [];
+
+
+
 
 stations.forEach(station => {
   // Enviamos una solicitud GET a la URL del stream
