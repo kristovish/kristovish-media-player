@@ -397,23 +397,3 @@ img {
   display: block;
 }
 
-
-@media (max-width: 600px) {
-  .station-menu,
-  .station-list,
-  .station-menu *,
-  .station-list * {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 400px) {
-  .station-menu,
-  .station-list,
-  .station-menu *,
-  .station-list * {
-    display: flex;
-    flex-direction: column;
-  }
-}
