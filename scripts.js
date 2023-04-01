@@ -2,6 +2,7 @@ const audio = document.getElementById("audio");
 const volumeControl = document.getElementById("volume-control");
 const volumeDisplay = document.getElementById("volume-display");
 const stationMenu = document.querySelector('.station-menu');
+const stationLinks = document.querySelectorAll('.station-link');
 const mediaInfo = document.getElementById("media-info");
 
 
@@ -63,6 +64,10 @@ mediaInfo.addEventListener("mouseout", () => {
 
 const stations = [
   {
+    name: 'Kristovish Media Player',
+    url: '#'
+  },
+  {
     name: 'Hard Rock Radio',
     url: 'https://n10.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABe147nwUAAzSNf0FALqXEig'
   },
@@ -88,7 +93,7 @@ const stations = [
   },
   {
     name: 'Denger Radio',
-    url: 'https://stream.denger.in:8888/dmi'
+    url: 'https://retroelectronicmusic.stream.laut.fm/retroelectronicmusic?t302=2023-03-09_09-08-07&uuid=f032bf25-46e3-46fe-881e-215f7364ab56'
   },
   {
     name: 'Skonto Radio',
@@ -96,46 +101,22 @@ const stations = [
   },
   {
     name: 'Kiss Radio',
-    url: 'https://radioindia.net/radio/kissfmindia/icecast.audio'
+    url: 'https://streamd.stream.laut.fm/streamd?t302=2023-03-10_03-52-18&uuid=9d3d816b-0689-4451-8d00-42804df8548b'
   },
   {
     name: 'Cassete Radio',
-    url: 'https://zas1.ndx.co.za:8158/stream?1596196923074'
+    url: 'https://radioton-stream28.radiohost.de/radioton-mt_mp3-192?'
   },
   {
-    name: 'E! Radio',
-    url: 'https://207.148.74.192:7874/stream.mp3'
+    name: 'Islam Radio',
+    url: 'http://5.9.65.9:8031/stream'
   },
   {
-    name: 'Chile Islam Radio',
-    url: 'https://5.9.65.9:8031/live?1508938696879'
+    name: 'Metal Power Radio',
+    url: 'https://blackmagicdwarf.stream.laut.fm/blackmagicdwarf?t302=2023-03-19_09-09-57&uuid=724e32c3-aedd-4096-90bf-3dcc3414614a'
   },
 ];
-const workingStations = [];
 
-
-
-
-stations.forEach(station => {
-  // Enviamos una solicitud GET a la URL del stream
-  fetch(station.url)
-    .then(response => {
-      // Si el estado es 200, la estación está funcionando
-      if (response.status === 200) {
-        workingStations.push(station);
-      }
-    })
-    .catch(error => {
-      console.error(`Error al obtener la estación ${station.name}: ${error}`)
-      //elimina elementos del reproductor con enlaces rotos
-      const element = document.getElementById(station.name);
-      element.parentNode.removeChild(element);
-    })
-    .finally(() => {
-      // Asignamos el array de estaciones funcionando a la variable stations
-      stations = workingStations;
-    });
-});
 
 
 
@@ -154,59 +135,6 @@ menuBtn.addEventListener('click', function () {
   menu.classList.toggle('show-menu');
 });
 
-
-// obtenemos cada uno de los hipervinculos
-// Obtenemos todos los elementos del menú que tienen la clase "station-link"
-const stationLinks = document.querySelectorAll(".station-link");
-stationLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    activateStation(this.id);
-  });
-});
-function activateStation(id) {
-  const activeStation = stations.find(station => station.name === id);
-  audio.src = activeStation.url;
-  audio.play();
-  // etc. para mostrar el nombre de la estación activa en el UI
-  playIcon.classList.add("hide");
-  pauseIcon.classList.remove("hide");
-}
-
-for (let i = 0; i < stationLinks.length; i++) {
-  stationLinks[i].addEventListener("click", function () {
-    activateStation(this.id);
-  });
-}
-
-function activateStation(id) {
-  const activeStation = stations.find(station => station.name === id);
-  if (!activeStation.url) {
-    document.getElementById("station-name").innerHTML = "Emisora no disponible";
-    document.getElementById("station-name").style.color = "red";
-    return;
-  }
-  audio.src = activeStation.url;
-  audio.play();
-  document.getElementById("station-name").innerHTML = activeStation.name;
-  document.getElementById("station-name").style.color = "black";
-}
-
-audio.onerror = function () {
-  // Aquí puedes mostrar un mensaje de error al usuario indicando que la emisora no está disponible
-  document.querySelector(".player__title").innerHTML = "Not Available In Your Place";
-};
-
-const stationName = document.getElementById("station-name");
-
-// dentro de tu función activateStation()
-function activateStation(id) {
-  const activeStation = stations.find(station => station.name === id);
-  audio.src = activeStation.url;
-  audio.play();
-
-  // actualizar el nombre de la estación en la UI
-  stationName.textContent = activeStation.name;
-}
 
 
 // Evento para volver a mostrar la etiqueta "Kristovish Media Player" cuando se pausa la reproducción
@@ -303,3 +231,39 @@ setInterval(() => {
   const img = document.querySelector('.player__img');
   img.classList.toggle('rotate-image');
 }, 25000);
+
+function loadStation(id) {
+  const activeStation = stations.find(station => station.name === id);
+  if (!activeStation.url) {
+    document.getElementById("station-name").innerHTML = "Emisora no disponible";
+    document.getElementById("station-name").style.color = "red";
+    return;
+  }
+  audio.src = activeStation.url;
+  audio.addEventListener("canplay", function() {
+    audio.play();
+  });
+  document.getElementById("station-name").innerHTML = activeStation.name;
+  document.getElementById("station-name").style.color = "black";
+}
+
+audio.onerror = function () {
+  // Aquí puedes mostrar un mensaje de error al usuario indicando que la emisora no está disponible
+  document.getElementById("station-name").innerHTML = "Error al reproducir la estación";
+  document.querySelector(".player__title").innerHTML = "Not Available In Your Place";
+};
+
+const stationName = document.getElementById("station-name");
+
+for (let i = 0; i < stationLinks.length; i++) {
+  stationLinks[i].addEventListener("click", function () {
+    loadStation(this.id);
+  });
+}
+
+function activateStation(id) {
+  const activeStation = stations.find(station => station.name === id);
+  audio.src = activeStation.url;
+  audio.pause();
+  stationName.textContent = activeStation.name;
+}
