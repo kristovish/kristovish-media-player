@@ -67,8 +67,8 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  /*box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);*/
 }
 
 .player__controls {
