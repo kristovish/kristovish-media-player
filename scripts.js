@@ -115,6 +115,18 @@ const stations = [
     name: 'Metal Power Radio',
     url: 'https://blackmagicdwarf.stream.laut.fm/blackmagicdwarf?t302=2023-03-19_09-09-57&uuid=724e32c3-aedd-4096-90bf-3dcc3414614a'
   },
+  {
+    name: 'Sabor Latino Radio',
+    url: 'https://barriolatinoradio.stream.laut.fm/barriolatinoradio?t302=2023-04-09_09-19-38&uuid=bb7e2bd3-3b0a-451d-b716-19ccc2310453'
+  },
+  {
+    name: 'Urbana Radio',
+    url: 'https://clubtracks.stream.laut.fm/clubtracks?t302=2023-04-09_09-34-02&uuid=23d7d9be-527d-4bdf-9a27-5a9d3ccf4129'
+  },
+  {
+    name: 'Orchestra Radio',
+    url: 'https://volontaradio.stream.laut.fm/volontaradio?t302=2023-04-09_09-53-29&uuid=44ff8b75-03ff-4d1f-9359-c0550ca7b90f'
+  },
 ];
 
 
@@ -199,31 +211,27 @@ backwardBtn.addEventListener("click", () => {
 });
 
 
-
-
 audio.volume = 0.5;
-volumeControl.addEventListener("input", () => {
-  setVolume(volumeControl.value);
-});
-
-function setVolume(value) {
-  audio.volume = value;
-}
-
 
 const volumeRange = document.getElementById("volume-control");
 const volumePercentage = document.getElementById("volume-display");
+volumeRange.setAttribute("min", "10");
+volumeRange.setAttribute("max", "100");
+volumeRange.setAttribute("step", "10");
+volumeRange.value = "50";
+setVolume(volumeRange.value);
 
 volumeRange.addEventListener("input", function () {
   const volumeValue = this.value;
+  setVolume(volumeValue);
   volumePercentage.innerHTML = `${volumeValue}%`;
 });
 
-
 function setVolume(value) {
-  audio.volume = value;
-  document.getElementById("volume-display").textContent = `${Math.round(value * 100)}%`;
+  audio.volume = value / 100;
+  document.getElementById("volume-display").textContent = `${value}%`;
 }
+
 
 
 //logo360
