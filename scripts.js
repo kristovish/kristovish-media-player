@@ -1,35 +1,35 @@
+
+
+
 const audio = document.getElementById("audio");
 const volumeControl = document.getElementById("volume-control");
 const volumeDisplay = document.getElementById("volume-display");
 const stationMenu = document.querySelector('.station-menu');
 const stationLinks = document.querySelectorAll('.station-link');
 const mediaInfo = document.getElementById("media-info");
-
-
-let iscurrentStation;
-
-function activateStation(id) {
-  const activeStation = stations.find(station => station.name === id);
-  audio.src = activeStation.url;
-  audio.play();
-  // etc. para mostrar el nombre de la estación activa en el UI
-}
-
 const playPause = document.getElementById("play");
-const playIcon = document.querySelector(".fa-broadcast-tower");
+const playIcon = document.querySelector(".fa-power-off");
 const pauseIcon = document.querySelector(".fa-pause-btn");
+const infoSection = document.getElementById("info-section"); // agregado
+
+
+
 
 playPause.addEventListener("click", () => {
   if (audio.paused || audio.ended) {
     audio.play();
-    playIcon.classList.add("hide");
-    pauseIcon.classList.remove("hide");
+    playIcon.classList.toggle("hide"); // modificado
+    pauseIcon.classList.toggle("hide"); // modificado
   } else {
     audio.pause();
-    playIcon.classList.remove("hide");
-    pauseIcon.classList.add("hide");
+    playIcon.classList.toggle("hide"); // modificado
+    pauseIcon.classList.toggle("hide"); // modificado
   }
 });
+
+
+
+
 
 
 //10 de Enero
@@ -129,6 +129,15 @@ const stations = [
   },
 ];
 
+
+let iscurrentStation;
+
+function activateStation(id) {
+  const activeStation = stations.find(station => station.name === id);
+  audio.src = activeStation.url;
+  audio.play();
+  // etc. para mostrar el nombre de la estación activa en el UI
+}
 
 
 
@@ -238,7 +247,10 @@ function setVolume(value) {
 setInterval(() => {
   const img = document.querySelector('.player__img');
   img.classList.toggle('rotate-image');
-}, 25000);
+}, 10000);
+
+
+
 
 function loadStation(id) {
   const activeStation = stations.find(station => station.name === id);
@@ -261,6 +273,9 @@ audio.onerror = function () {
   document.querySelector(".player__title").innerHTML = "Not Available In Your Place";
 };
 
+
+
+
 const stationName = document.getElementById("station-name");
 
 for (let i = 0; i < stationLinks.length; i++) {
@@ -273,5 +288,8 @@ function activateStation(id) {
   const activeStation = stations.find(station => station.name === id);
   audio.src = activeStation.url;
   audio.pause();
-  stationName.textContent = activeStation.name;
+  stationName.textContent = activeStation.name; // Muestra el nombre de la radio activa
+  audio.addEventListener('play', function() { // Agrega un evento para actualizar el nombre de la radio en reproducción
+    stationName.textContent = activeStation.name;
+  });
 }
