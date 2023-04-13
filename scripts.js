@@ -127,7 +127,15 @@ const stations = [
     name: 'Orchestra Radio',
     url: 'https://volontaradio.stream.laut.fm/volontaradio?t302=2023-04-09_09-53-29&uuid=44ff8b75-03ff-4d1f-9359-c0550ca7b90f'
   },
+  {
+    name: 'Kronos Radio',
+    url: 'http://14993.live.streamtheworld.com:3690/KRONOS_S01AAC_SC'
+  },
 ];
+
+
+
+
 
 
 let iscurrentStation;
