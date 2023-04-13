@@ -109,7 +109,7 @@ const stations = [
   },
   {
     name: 'Islam Radio',
-    url: 'http://5.9.65.9:8031/stream'
+    url: 'https://centova.neonetwork.cl:9031/live'
   },
   {
     name: 'Metal Power Radio',
