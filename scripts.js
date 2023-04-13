@@ -129,7 +129,7 @@ const stations = [
   },
   {
     name: 'Kronos Radio',
-    url: 'http://14993.live.streamtheworld.com:3690/KRONOS_S01AAC_SC'
+    url: 'https://19813.live.streamtheworld.com/KRONOS_S01AAC.aac?pname=StandardPlayerV4&pversion=4.19.2-044&dist=triton-web&tdsdk=js-2.9&swm=false&banners=300x250&burst-time=15&sbmid=c78d9a50-932c-454b-bf24-b3078db5c440'
   },
 ];
 
