@@ -215,17 +215,7 @@ document.getElementById("backward").addEventListener("click", prevStation);
 
 
 
-const forwardBtn = document.getElementById("forward");
-forwardBtn.addEventListener("click", () => {
-  currentStationIndex = (currentStationIndex + 1) % stations.length;
-  activateStation();
-});
 
-const backwardBtn = document.getElementById("backward");
-backwardBtn.addEventListener("click", () => {
-  currentStationIndex = (currentStationIndex - 1 + stations.length) % stations.length;
-  activateStation();
-});
 
 
 audio.volume = 0.5;
