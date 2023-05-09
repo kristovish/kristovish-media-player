@@ -68,71 +68,71 @@ const stations = [
     url: '#'
   },
   {
-    name: 'Hard Rock Radio',
+    name: '🎼Hard Rock Jakarta',
     url: 'https://n10.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABe147nwUAAzSNf0FALqXEig'
   },
   {
-    name: 'Capital UK Radio',
+    name: '🎼Capital United Kingdom',
     url: 'https://media-ice.musicradio.com/CapitalMP3'
   },
   {
-    name: 'Rock Nation Radio',
+    name: '🎼Rock Nation Radio',
     url: 'https://prclive4.listenon.in/Dance'
   },
   {
-    name: 'Cosmos Radio',
+    name: '🎼Cosmos San Juan',
     url: 'https://cosmosfm.stream.laut.fm/cosmosfm?'
   },
   {
-    name: 'Prambos Radio',
+    name: '🎼Prambos Jakarta',
     url: 'https://22283.live.streamtheworld.com:443/PRAMBORS_FM.mp3?dist=onlineradiobox'
   },
   {
-    name: 'I-Radio',
+    name: '🎼I-Radio Jakarta',
     url: 'https://n03.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABe120nigAlANV6qVbAOh-ZQ'
   },
   {
-    name: 'Denger Radio',
+    name: '🎼Denger Radio',
     url: 'https://retroelectronicmusic.stream.laut.fm/retroelectronicmusic?t302=2023-03-09_09-08-07&uuid=f032bf25-46e3-46fe-881e-215f7364ab56'
   },
   {
-    name: 'Skonto Radio',
+    name: '🎼Skonto Plus Riga',
     url: 'https://stream.radioskontoplus.lv:8443/st128'
   },
   {
-    name: 'Kiss Radio',
+    name: '🎼Kiss Radio',
     url: 'https://streamd.stream.laut.fm/streamd?t302=2023-03-10_03-52-18&uuid=9d3d816b-0689-4451-8d00-42804df8548b'
   },
   {
-    name: 'Cassete Radio',
+    name: '🎼Radio Ton Deutschland',
     url: 'https://radioton-stream28.radiohost.de/radioton-mt_mp3-192?'
   },
   {
-    name: 'Islam Radio',
+    name: '🎼Islam Radio Chile',
     url: 'https://centova.neonetwork.cl:9031/live'
   },
   {
-    name: 'Metal Power Radio',
+    name: '🎼Metal Power Radio',
     url: 'https://blackmagicdwarf.stream.laut.fm/blackmagicdwarf?t302=2023-03-19_09-09-57&uuid=724e32c3-aedd-4096-90bf-3dcc3414614a'
   },
   {
-    name: 'Sabor Latino Radio',
+    name: '🎼Sabor Latino Radio',
     url: 'https://barriolatinoradio.stream.laut.fm/barriolatinoradio?t302=2023-04-09_09-19-38&uuid=bb7e2bd3-3b0a-451d-b716-19ccc2310453'
   },
   {
-    name: 'Urbana Radio',
+    name: '🎼Urbana Radio',
     url: 'https://clubtracks.stream.laut.fm/clubtracks?t302=2023-04-09_09-34-02&uuid=23d7d9be-527d-4bdf-9a27-5a9d3ccf4129'
   },
   {
-    name: 'Orchestra Radio',
+    name: '🎼Orchestra Radio',
     url: 'https://volontaradio.stream.laut.fm/volontaradio?t302=2023-04-09_09-53-29&uuid=44ff8b75-03ff-4d1f-9359-c0550ca7b90f'
   },
   {
-    name: 'Kronos Radio',
+    name: '🎼Kronos Radio Wicca',
     url: 'https://18253.live.streamtheworld.com/KRONOS_S01AAC.aac?pname=StandardPlayerV4&pversion=4.19.2-044&dist=triton-web&tdsdk=js-2.9&swm=false&banners=300x250&burst-time=15&sbmid=48244818-45ce-4a7c-8ce1-8327c760466e'
   },
   {
-    name: 'J-Pop Sakura 懐かしい Radio',
+    name: '🎼J-Pop Sakura 懐かしい Radio',
     url: 'https://cast1.torontocast.com:2170/;?type=http&nocache=3'
   },
 ];
@@ -262,7 +262,7 @@ function loadStation(id) {
     audio.play();
   });
   document.getElementById("station-name").innerHTML = activeStation.name;
-  document.getElementById("station-name").style.color = "black";
+  document.getElementById("station-name").style.color = "#3e0146e3";
 }
 
 audio.onerror = function () {

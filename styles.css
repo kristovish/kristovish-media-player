@@ -2,7 +2,7 @@
 
 :root {
   --background: #e0e5ec;
-  --gray: #797d7f;
+  --gray: #1f4f68;
 }
 
 *,
@@ -94,7 +94,7 @@ img {
 .player__title {
   font-weight: 600;
   font-size: 0.8em;
-  color: #a1a1a1;
+  color: #795548;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
@@ -157,7 +157,7 @@ img {
   width: 78%;
   font-size: 10px;
   font-weight: 600;
-  color: #a1a1a1;
+  color: #1f4f68;
   letter-spacing: 1px;
 }
 
@@ -187,9 +187,10 @@ img {
   position: relative;
   width: 100%;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
+  color: #3e0146e3;
   font-size: 1em;
-  opacity: 0.5;
+  opacity: 1.5;
   margin: 0;
 }
 
@@ -224,7 +225,7 @@ img {
   border-radius: 12px;
   box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
     inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
-  padding: 1em;
+  padding: 0em;
   display: none;
 }
 
@@ -300,7 +301,7 @@ img {
 }
 
 #station-name {
-  animation: move-right-to-left 5s linear infinite;
+  animation: move-right-to-left 8s linear infinite;
 }
 
 @keyframes move-right-to-left {
