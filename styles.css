@@ -11,22 +11,15 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-
-}
-
-
-body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-
 }
 
 img {
   max-width: 100%;
 }
+
 
 .container {
   background-color:#ffffff;
@@ -394,4 +387,3 @@ img {
 .play-pause.playing .pause-icon {
   display: block;
 }
-

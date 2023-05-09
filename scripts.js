@@ -129,7 +129,11 @@ const stations = [
   },
   {
     name: 'Kronos Radio',
-    url: 'https://19813.live.streamtheworld.com/KRONOS_S01AAC.aac?pname=StandardPlayerV4&pversion=4.19.2-044&dist=triton-web&tdsdk=js-2.9&swm=false&banners=300x250&burst-time=15&sbmid=c78d9a50-932c-454b-bf24-b3078db5c440'
+    url: 'https://18253.live.streamtheworld.com/KRONOS_S01AAC.aac?pname=StandardPlayerV4&pversion=4.19.2-044&dist=triton-web&tdsdk=js-2.9&swm=false&banners=300x250&burst-time=15&sbmid=48244818-45ce-4a7c-8ce1-8327c760466e'
+  },
+  {
+    name: 'J-Pop Sakura 懐かしい Radio',
+    url: 'https://cast1.torontocast.com:2170/;?type=http&nocache=3'
   },
 ];
 
@@ -212,10 +216,6 @@ const prevStation = () => {
 
 document.getElementById("forward").addEventListener("click", nextStation);
 document.getElementById("backward").addEventListener("click", prevStation);
-
-
-
-
 
 
 audio.volume = 0.5;
