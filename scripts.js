@@ -92,7 +92,7 @@ const stations = [
     url: 'https://n03.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABe120nigAlANV6qVbAOh-ZQ'
   },
   {
-    name: '🎼Denger Radio',
+    name: '🎼Denger EBM Radio',
     url: 'https://retroelectronicmusic.stream.laut.fm/retroelectronicmusic?t302=2023-03-09_09-08-07&uuid=f032bf25-46e3-46fe-881e-215f7364ab56'
   },
   {
@@ -124,7 +124,7 @@ const stations = [
     url: 'https://clubtracks.stream.laut.fm/clubtracks?t302=2023-04-09_09-34-02&uuid=23d7d9be-527d-4bdf-9a27-5a9d3ccf4129'
   },
   {
-    name: '🎼Orchestra Radio',
+    name: '🎼Volonta Radio',
     url: 'https://volontaradio.stream.laut.fm/volontaradio?t302=2023-04-09_09-53-29&uuid=44ff8b75-03ff-4d1f-9359-c0550ca7b90f'
   },
   {
@@ -134,6 +134,10 @@ const stations = [
   {
     name: '🎼J-Pop Sakura 懐かしい Radio',
     url: 'https://cast1.torontocast.com:2170/;?type=http&nocache=3'
+  },
+  {
+    name: '🎼KKFI Radio Powered by Diversity',
+    url: 'https://stream.pacificaservice.org:9000/kkfi_128'
   },
 ];
 
