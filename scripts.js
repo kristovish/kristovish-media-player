@@ -279,7 +279,7 @@ function loadStation(id) {
 
 audio.onerror = function () {
   // Aquí puedes mostrar un mensaje de error al usuario indicando que la emisora no está disponible
-  document.getElementById("station-name").innerHTML = "This Radio is Not Available In Your Place";
+  document.getElementById("station-name").innerHTML = "This radio station cannot be accessed or used in your country.";
   document.querySelector(".player__title").innerHTML = " Sorry T_T";
 };
 
