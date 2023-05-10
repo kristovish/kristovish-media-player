@@ -136,7 +136,7 @@ const stations = [
     url: 'https://cast1.torontocast.com:2170/;?type=http&nocache=3'
   },
   {
-    name: '🎼KKFI Radio Powered by Diversity',
+    name: '🎼KKFI Indie Radio',
     url: 'https://stream.pacificaservice.org:9000/kkfi_128'
   },
 ];
