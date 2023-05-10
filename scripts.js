@@ -129,7 +129,7 @@ const stations = [
   },
   {
     name: '🎼Kronos Radio Wicca',
-    url: 'https://18253.live.streamtheworld.com/KRONOS_S01AAC.aac?pname=StandardPlayerV4&pversion=4.19.2-044&dist=triton-web&tdsdk=js-2.9&swm=false&banners=300x250&burst-time=15&sbmid=48244818-45ce-4a7c-8ce1-8327c760466e'
+    url: 'https://playerservices.streamtheworld.com/api/livestream-redirect/KRONOS_S01_SC'
   },
   {
     name: '🎼J-Pop Sakura 懐かしい Radio',
