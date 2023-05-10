@@ -139,6 +139,14 @@ const stations = [
     name: '🎼KKFI Indie Radio',
     url: 'https://stream.pacificaservice.org:9000/kkfi_128'
   },
+  {
+    name: '🎼Radio Ultra Rusia',
+    url: 'https://nashe1.hostingradio.ru:18000/ultra-128.mp3'
+  },
+  {
+    name: '🎼Wish Philippines',
+    url: 'https://untv.mmdlive.lldns.net/untv/f55dcf9ae0f542d6a7614893d0c2dd83/manifest.m3u8'
+  },
 ];
 
 
@@ -271,8 +279,8 @@ function loadStation(id) {
 
 audio.onerror = function () {
   // Aquí puedes mostrar un mensaje de error al usuario indicando que la emisora no está disponible
-  document.getElementById("station-name").innerHTML = "Error al reproducir la estación";
-  document.querySelector(".player__title").innerHTML = "Not Available In Your Place";
+  document.getElementById("station-name").innerHTML = "This Radio is Not Available In Your Place";
+  document.querySelector(".player__title").innerHTML = " Sorry T_T";
 };
 
 
